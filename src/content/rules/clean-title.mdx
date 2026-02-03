@@ -16,8 +16,67 @@ rationale:
 status: Active
 rule_context: Names
 mikumod_support: "Planned"
+excerpt: Only include the song name on the entry name. Do not include other details (vocalists, song type, producers), except for [remix titles](https://wiki.vocadb.net/rules/keep-remix-titles).
 ---
 
-The title section should only contain the name of the song, except for `Remix` and `Remaster` entries: https://wiki.vocadb.net/rules/keep-remix-titles
+The primary names and the aliases (if any) of a song entry should only contain the name of songs. Any other details should not be included, such as, but not limited to:
 
-- Vocalists, song type, producers, etc. should all be removed.
+- Vocalists, including voice synths (e.g. "feat. Hatsune Miku")
+- Song types (e.g. "Official Music Video", "Vocaloid Original", "Cover")
+- Producers, or any other artists
+- Voice data availability (e.g. "+UST", "+VSQ")
+
+Exception exists for remix titles, see [the "Keep remix titles" rule](https://wiki.vocadb.net/rules/keep-remix-titles) for details.
+
+<!-- todo use note alert -->
+
+> **Note**
+>
+> In most derivatives/alternate versions, you may only need to copy the name of the original version. You can open the original version as reference when adding/editing an entry.
+
+## Examples
+
+The following examples are extracted from (English) video titles, as if you don't edit the name that is automatically inserted when creating a song entry.
+
+For "[Alien Alien](https://vocadb.net/S/106773)".
+
+> **Incorrect**
+>
+> <s>NayutalieN</s> - Alien Alien <s>(ft. Hatsune Miku) [Official Music Video]</s>
+
+- "NayutalieN" is the producer (added as an artist)
+- "Hatsune Miku" is the vocalist (added as an artist)
+- "Official Music Video" indicates the song type (covered in the song entry type)
+
+> **Correct**
+>
+> Alien Alien
+
+For "[CYBERPUNK DEAD BOY](https://vocadb.net/S/582638)":
+
+> **Incorrect**
+>
+> CYBERPUNK DEAD BOY <s>feat. HATSUNE MIKU / Maiki P</s>
+
+- "Maiki P" is the producer (added as an artist)
+- "HATSUNE MIKU" is the vocalist (added as an artist)
+
+> **Correct**
+>
+> CYBERPUNK DEAD BOY
+
+For [a cover of "Bite Me"](https://vocadb.net/S/378730):
+
+> **Incorrect**
+>
+> <s>【SOLARIA】</s>Bite Me <s>(Avril Lavigne)【English SynthV Cover】+SVP</s> 
+
+- "SOLARIA" is the vocalist (added as an artist)
+- "Avril Lavigne" is the vocalist of the original song (added as an artist on [the cover unifier, if any](https://vocadb.net/T/6751))
+- "English SynthV Cover" indicates the song type (covered in the song entry type)
+- "+SVP" indicates the song data availabiltiy (added as [a tag](https://vocadb.net/T/7225))
+
+> **Correct**
+>
+> Bite Me
+
