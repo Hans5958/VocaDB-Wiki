@@ -18,7 +18,7 @@ export default function MobileNavbar({
       </SheetTrigger>
       <SheetContent side="left" className="p-0">
         <ScrollArea className="h-full">
-          <div className="p-6">{children}</div>
+          <div className="my-6">{children}</div>
         </ScrollArea>
       </SheetContent>
     </Sheet>

@@ -1,5 +1,5 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { cn } from "@/lib/utils.ts";
 import type {
   groupedNavbarParents,
@@ -25,9 +25,12 @@ export function NavContents({
 
   const containerClass = cn(
     "flex flex-col",
-    mobile ? "space-y-3 pb-6" : "space-y-1 pb-4 text-sm",
+    mobile ? "space-y-3 mb-6" : "space-y-1 mb-4 text-sm",
   );
-  const buttonClass = mobile ? "py-1.5" : "py-1";
+  const buttonClass = cn(
+    mobile ? "py-1.5 [--pad-inline:1.5rem]" : "py-1 [--pad-inline:0rem]",
+    "ps-[calc(1rem*var(--depth)+var(--pad-inline))] pe-[var(--pad-inline)]",
+  );
   const linkClass = "hover:underline";
 
   return (
@@ -42,8 +45,14 @@ export function NavContents({
           };
         })
         .map(({ navbarItem, title }) => (
-          <div key={navbarItem.title} className={containerClass}>
-            <h4 className={"font-semibold"}>{title}</h4>
+          <div
+            key={navbarItem.title}
+            className={containerClass}
+            style={{ "--depth": 0 } as CSSProperties}
+          >
+            <h4 className={cn(buttonClass, "py-0", "font-semibold")}>
+              {title}
+            </h4>
 
             <div className={"flex flex-col"}>
               {navbarItem.subcategories !== undefined &&
@@ -70,8 +79,9 @@ export function NavContents({
                         </button>
                         <div
                           className={cn(
-                            "peer-data-[state=open]:grid hidden text-muted-foreground ml-4",
+                            "peer-data-[state=open]:grid hidden text-muted-foreground",
                           )}
+                          style={{ "--depth": 1 } as CSSProperties}
                         >
                           {groupedNavbarParents[c]?.map((post) => (
                             <a
