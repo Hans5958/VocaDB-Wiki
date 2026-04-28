@@ -1,5 +1,5 @@
 ---
-name: Correct Youtube link
+name: Correct YouTube link
 id: 75
 entry_type:
   - Artists
@@ -18,15 +18,20 @@ rule_context: External links
 mikumod_support: "Planned"
 automatically_fixed: "True"
 complete_validation: "True"
+excerpt: Include at least one URL to the artist's YouTube channel other than the Handle URL (uses `@`, e.g. <https://www.youtube.com/@YouTube>).
 ---
 
-If artist entries include Youtube URLs, at least one non-handle version must be included.
+If an artist entry include YouTube URLs, at least one non-handle version must be included.
 
+- Channel URL (default/canonical): https://www.youtube.com/channel/UCBR8-60-B28hp2BmDPdntcQ
 - Handle URL: https://www.youtube.com/@YouTube
-- Default URL: https://www.youtube.com/channel/YouTube
 - Custom URL: https://www.youtube.com/c/YouTube
 - Legacy URL: https://www.youtube.com/user/YouTube
 
 Adding links with different URL formats is encouraged because they can be useful for recognition and archival purposes.
 
-Handle URLS "@" (for example https://www.youtube.com/@YouTube) are not currently supported by the system that adds relevant artists to songs on the song submission page, so if an artist has only the "@" url, you will have to add the artist manually.
+Handle URLs are not currently supported by the system that adds relevant artists to songs on the song submission page, so if an artist has only the Handle URL, you will have to add the artist manually.
+
+## Related links
+
+- [YouTube Help: Understand your YouTube channel's URL](https://support.google.com/youtube/answer/6180214)
