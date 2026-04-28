@@ -16,8 +16,49 @@ rationale:
 status: Active
 rule_context: Names
 mikumod_support: "Planned"
+excerpt: Only include the title of the song as the entry name ([with exceptions on "Remix" and "Remaster" entries](https://wiki.vocadb.net/rules/keep-remix-titles))
 ---
 
-The title section should only contain the name of the song, except for `Remix` and `Remaster` entries: https://wiki.vocadb.net/rules/keep-remix-titles
+import { Alert } from "@/components/ui/alert";
+import RuleEmbed from "@/components/markdown/RuleEmbed.astro";
 
-- Vocalists, song type, producers, etc. should all be removed.
+A primary name or an alias of a song entry should only contain the title of the song. This means you shouldn't include the following, but not limited to, information on the name:
+
+- **Artists**  
+  Add them as the artist of the song.
+  - Vocalists (e.g. "feat. Hatsune Miku")
+  - Producers (e.g. "DECO\*27", "椎名もた(siinamota)", "Jamie Pagie")
+  - Featured artist (e.g. "w/ OK Glass")
+  - Original artists (for derivatives)  
+    [Do not add them as the artist of the derived song!](/rules/skip-original-artist-credits-for-derived-songs)
+
+- **Song type** (e.g. "Cover", "Original Song")  
+  Use the "Type" field.
+
+- **Language** (e.g. "Japanese", "English")  
+  Use the "Language" field.
+
+- **Tools** (e.g "VOCALOID", "SynthV", "UTAU")  
+  Add them as tags.
+
+- **Genres** (e.g. "EDM", "Pop")  
+  Add them as tags.
+
+- **Other information** (e.g. "Official Audio", "Voicebank Debut")  
+  Add them as tags whenever possible.
+
+Exception exists for "Remix" and "Remaster" entries. See [the "Keep remix titles" rule](https://wiki.vocadb.net/rules/keep-remix-titles).
+
+<Alert variant="note">
+
+In most derivatives, you only need to **copy** the primary name and aliases of the entry of the original song. When in doubt, take a look on how it is named on the original song entry.
+
+</Alert>
+
+## Related rules
+
+<RuleEmbed ruleId={102} />
+
+## Related links
+
+- [MusicBrainz: Style / Titles](https://musicbrainz.org/doc/Style/Titles)
