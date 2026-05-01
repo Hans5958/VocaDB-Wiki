@@ -17,11 +17,25 @@ status: Active
 rule_context:
 mikumod_support: "Planned"
 relevant_tag_id: 4631
+excerpt: >
+  For derived songs, refer the original by...
+    - adding the song entry on the "Original version" field
+    - adding the UtaiteDB/TouhouDB entry as an external link
+    - following [the "Specify out-of-scope original" rule](/rules/specify-out-of-scope-original)
+    - adding the "[original version unknown](https://vocadb.net/T/4631)" tag
 ---
 
-Derived songs should either:
+import RuleEmbed from "@/components/markdown/RuleEmbed.astro";
 
-- Specify the `Original version` field.
-- Refer as an external link to the original entry on [UtaiteDB](https://utaitedb.net/S/) or [TouhouDB](https://touhoudb.com/), if applicable. This will display it as the "Original version" along with automatic metadata.
-- Include the [human original](https://vocadb.net/T/3193/human-original) or [instrumental original](https://vocadb.net/T/12491/instrumental-original) tag.
-- Include the [original version unknown](https://vocadb.net/T/4631) tag.
+Derived songs should have a reference to the original song by doing the following, in priority from top to bottom:
+
+1. Specify the "Original version" field.
+2. Add the original entry on [UtaiteDB](https://utaitedb.net/S/) or [TouhouDB](https://touhoudb.com/) as an external link. This will display it as the "Original version" along with automatic metadata.
+3. If it is out-of-scope of the database, follow [the "Specify out-of-scope original" rule](/rules/specify-out-of-scope-original).
+4. If it is unknown, add the [original version unknown](https://vocadb.net/T/4631) tag.
+
+This includes if the original song is out-of-scope. Refer to [the "Specify out-of-scope original" rule] for more information.
+
+## Related rules
+
+<RuleEmbed ruleId={106} />
