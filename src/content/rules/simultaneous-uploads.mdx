@@ -17,14 +17,20 @@ status: Active
 rule_context:
 mikumod_support: "Planned"
 relevant_tag_id: 4946
+excerpt: >
+  If the (voice synth) song also has a human-sung version uploaded less than a week apart, set the song entry as [an original song](/rules/original-song-classification) and tag it with "[simultaneous upload](https://vocadb.net/T/4946)".
 ---
 
-Voice synth songs that include both an official voice synth version and an official human-sung version (out-of-scope) should be tagged with [simultaneous upload](https://vocadb.net/T/4946) if the publish dates are less than **a week** apart.
+import RuleEmbed from "@/components/markdown/RuleEmbed.astro";
 
-- In this case the entry should be marked as `Original song`.
+If a voice synth song also has an official human-sung version and both of them are published less than **a week** apart, the (voice synth) song entry should have [the "Original song" type](/rules/original-song-classification) and be tagged with [simultaneous upload](https://vocadb.net/T/4946).
 
-- Specify the human-sung version in the **song description** or **external links** with its **publish date**.
+Otherwise, if the human-sung version is published more than a week before the voice synth version, the song entry is a [cover](/rules/original-song-classification), tagged with [the "self-cover" tag](https://vocadb.net/T/391).
 
-- If the human-sung version is published more than a week before the voice synth version, mark the song as "cover" with the self-cover tag instead.
+Add the human-sung version as the reference following [the "Specify original" rule](/rules/specify-original), plus the **publish date** (unless it exists on VocaDB/TouhouDB/UtaiteDB).
 
-- These rules do not apply if both songs have entries on VocaDB.
+These rules do not apply if both songs have entries on VocaDB.
+
+## Related rules
+
+<RuleEmbed ruleId={105} />
